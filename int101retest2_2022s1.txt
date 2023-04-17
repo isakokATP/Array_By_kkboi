@@ -1,0 +1,47 @@
+0. create a project named "int101retest2".
+0.1 put your student id and your full name in all files as follows:
+// Student Id: (e.g., 65000000999)
+// Full Name: (e.g., Kriengkrai Porkaew)
+// Seat No: (e.g., 15.8)
+0.2 clean your project and submit only source code files (.java) 
+    in the proper folders (corresponding to the packages).
+0.3 format your code properly; name your variables conventionally.
+0.4 do not print any message out where they are not supposed to be printed.
+
+1. create a class named "UserAccount" in "account.id999" package.
+1.1 add a private final field named "userName" which is a "String".
+1.2 add a package-private (default) final field named "owner" field which is a "Person".
+1.3 add a private static final field named "allUsers" which is an array of "String" 
+    and initialize it to an array of size 10. This array is for storing all "userName".
+1.4 add a private static field named "userNameCount" which is an "int" that counts 
+    the number of "userName" in the "allUsers" array.
+1.5 add a package-private (default) constructor that receives a "userName" of "String" type
+    and an "owner" of "Person" type. This constructor initializes the respective fields.
+    It also adds this "userName" to the "allUsers" array and increases the "userNameCount" by 1.
+1.6 add a package-private (default) static method named "exists". This method receives 
+    a "userName" of "String" type and returns a "boolean".  This method returns "true" 
+    if the "userName" parameter is in the "allUsers" array. Otherwise, it returns "false".
+1.7 add a package-private (default) static method named "isValid". This method receives 
+    a "userName" of "String" type and returns a "boolean".  This method returns "true" 
+    if the "userName" parameter is not null and not blank.  Otherwise, it returns "false".
+1.8 override the "toString()" method to show the "userName" and the "name" of the "owner".
+//
+2. create a class name "Person" in "account.id999" package.
+2.1 add a private final field named "name" which is a "String".
+2.2 add a private final field named "accounts" which is an array of "UserAccount" type 
+    and initialize its size to 5.
+2.3 add a private field named "count" which is an "int" which is used to count 
+    the number of "accounts" in the "UserAccount" array.
+2.4 add a public constructor that receives "name" parameter to initialize the "name" field.
+2.5 override the "toString()" method to show the "name" field and all "UserAccount" 
+    in the "accounts" array.
+2.6 add a public "addAcount" method that receives a "userName" parameter of "String" type.
+    If this "userName" is valid and does not already exist (according to the methods in 
+    the "UserAccount" class), create a new "UserAccount" and add this account to the 
+    "accounts" array and return the newly-created "UserAccount". Otherwise, return null.
+    In case that the "accounts" array is full, return null as well.
+2.7 add a package-private "getName" method that return the "name" of the "Person".
+//
+3. create a class named "Int101ReExam999" in "test2.id999" package.
+3.1 add a public static void method to test all public methods (1.8, 2.4, 2.5, 2.6).
+
